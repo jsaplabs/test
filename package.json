@@ -1,5 +1,6 @@
 {
-  "name": "mozillacampusclubofsliit",
+  "homepage": "https://jsaplabs.github.io",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +17,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,28 +43,40 @@
     ]
   },
   "root": true,
-       "parser": "@typescript-eslint/parser",
-       "plugins": ["@typescript-eslint"],
-       "extends": [
-          "eslint:recommended",
-          "plugin:@typescript-eslint/eslint-recommended",
-          "plugin:@typescript-eslint/recommended",
-          "prettier/@typescript-eslint", 
-          "plugin:prettier/recommended"
-       ],
-       "overrides": [{
-          "files": ["*.tsx", "*.ts"],
-          "rules": {
-             "no-unused-expressions": "off",
-             "@typescript-eslint/no-unused-expressions": ["off"]
-          }
-       }],
-       "rules": {
-          "no-ternary": "off",
-          "no-unused-expressions": "off",
-          "@typescript-eslint/no-unused-expressions": ["off"]
-       },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.tsx",
+        "*.ts"
+      ],
+      "rules": {
+        "no-unused-expressions": "off",
+        "@typescript-eslint/no-unused-expressions": [
+          "off"
+        ]
+      }
+    }
+  ],
+  "rules": {
+    "no-ternary": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": [
+      "off"
+    ]
+  },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "prettier": "2.5.1"
   }
 }
